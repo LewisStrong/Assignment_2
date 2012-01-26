@@ -1,0 +1,16 @@
+<% form_for @request do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :leavedate %><br />
+    <%= f.date_select :leavedate %>
+  </p>
+  <p>
+    <%= f.label :return date %><br />
+    <%= f.date_select :returndate %>
+  </p>
+  <p>
+    <%= f.label :total %><br />
+    <%= f.text_field :total %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

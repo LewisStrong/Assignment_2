@@ -1,0 +1,76 @@
+body
+{
+	background-color:#D0DC66
+}
+h1
+{
+	color:#15397F;
+	text-align:center;
+	font-family:"Adobe Ming Std L";
+	font-weight: Bolder;
+	font-size: 28px
+	
+}
+h2
+{
+	font-family:"Adobe Ming Std L";
+	text-align:center;
+	color:#15397F;
+	font-weight: Bolder;
+	font-size: 20px
+}
+p
+{
+	font-family:"Adobe Ming Std L";
+	text-align:center;
+	color:#15397F;
+	font-weight: Bolder;
+	font-size: 18px
+}
+form
+{
+	padding:0;
+	margin:0;
+	font-family:"Adobe Ming Std L";
+	text-align:center;
+	color:#15397F;
+	font-weight: Bolder;
+	font-size: 18px;
+	width: 300px;
+	margin:0 auto
+}
+table,td
+{
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse:collapse;
+	padding: 10px;
+	text-align:center;
+	font-family:"Helvetica";
+	font-size:12px
+}
+th
+{
+	border-collapse:collapse;
+	padding:10px;
+	border: 1px solid white;
+	color:#FFFFFF;
+	background-color:#15397F;
+	text-align:center;
+	font-family:"Helvetica";
+	font-size:16px
+}
+#Banner
+{
+	padding:0;
+	margin:0;
+	text-align:center;
+	margin:0 auto
+}
+#links
+{
+	padding:0;
+	margin:0;
+	text-align:center;
+	margin:0 auto
+}
