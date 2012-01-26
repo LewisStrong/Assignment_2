@@ -21,19 +21,15 @@
   <%= link_to "Delete", @request, :confirm => 'Are you sure?', :method => :delete %>
  
 </p>
-  
-<p>&nbsp;</p>
 
 <table>
 <tr>
-<th>User ID</th>
-<th>Leave Date<br>(dd/mm/yyyy)</th>
-<th>Return Date<br>(dd/mm/yyyy)</th>
+<th>Leave Date</th>
+<th>Return Date</th>
 <th>Total Days</th>
 </tr>
 
 <tr>
-<td><%=h @request.user_id %></td>
 <td><%=h @request.leavedate %></td>
 <td><%=h @request.returndate %></td>
 <td><%=h @request.total %></td>

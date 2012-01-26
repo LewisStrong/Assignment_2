@@ -1,24 +1,22 @@
 class RequestsController < ApplicationController
+  before_filter :login_required
+  
   def index
-    login_required
     @requests = Request.all
   end
 
   def show
-  login_required
     @request = Request.find(params[:id])
   end
 
   def new
-    login_required
     @request = Request.new
   end
 
   def create
     @request = Request.new(params[:request])
-    @request.user_id = current_user.id
     if @request.save
-      flash[:notice] = "Successfully created request."
+      flash[:notice] = "Successfully Created Holiday Request."
       redirect_to @request
     else
       render :action => 'new'
@@ -26,14 +24,13 @@ class RequestsController < ApplicationController
   end
 
   def edit
-  login_required
     @request = Request.find(params[:id])
   end
 
   def update
     @request = Request.find(params[:id])
     if @request.update_attributes(params[:request])
-      flash[:notice] = "Successfully updated request."
+      flash[:notice] = "Successfully Updated Request."
       redirect_to @request
     else
       render :action => 'edit'
@@ -43,7 +40,7 @@ class RequestsController < ApplicationController
   def destroy
     @request = Request.find(params[:id])
     @request.destroy
-    flash[:notice] = "Successfully destroyed request."
+    flash[:notice] = "Successfully Deleted Holiday Request."
     redirect_to requests_url
   end
 end

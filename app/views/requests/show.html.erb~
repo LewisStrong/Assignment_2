@@ -16,23 +16,20 @@
 <h1>Staff Holiday Requests</h1>
 
 <p>
+  <%= link_to "View All", requests_path %> |
   <%= link_to "Edit", edit_request_path(@request) %> |
-  <%= link_to "Delete", @request, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", requests_path %>
+  <%= link_to "Delete", @request, :confirm => 'Are you sure?', :method => :delete %>
+ 
 </p>
-  
-<p>&nbsp;</p>
 
 <table>
 <tr>
-<th>User ID</th>
 <th>Leave Date<br>(dd/mm/yyyy)</th>
 <th>Return Date<br>(dd/mm/yyyy)</th>
 <th>Total Days</th>
 </tr>
 
 <tr>
-<td><%=h @request.user_id %></td>
 <td><%=h @request.leavedate %></td>
 <td><%=h @request.returndate %></td>
 <td><%=h @request.total %></td>

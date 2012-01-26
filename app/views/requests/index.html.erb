@@ -22,7 +22,6 @@
 <table>
   <tr>
     <th></th>
-    <th>User ID</th>
     <th>Leave date</th>
     <th>Return date</th>
     <th>Total Days</th>
@@ -31,7 +30,6 @@
   <% for request in @requests %>
     <tr>
       <td><%= link_to "Show", request %></td>
-      <td><%=h request.user_id %></td>
       <td><%=h request.leavedate %></td>
       <td><%=h request.returndate %></td>
       <td><%=h request.total %></td>     

@@ -1,15 +1,15 @@
 <% form_for @request do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :leavedate %><br />
+    <%= f.label :"Leave Date" %><br />
     <%= f.date_select :leavedate %>
   </p>
   <p>
-    <%= f.label :return date %><br />
+    <%= f.label :"Return Date" %><br />
     <%= f.date_select :returndate %>
   </p>
   <p>
-    <%= f.label :total %><br />
+    <%= f.label :"Total" %><br />
     <%= f.text_field :total %>
   </p>
   <p><%= f.submit %></p>
