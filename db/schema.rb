@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120125120503) do
+ActiveRecord::Schema.define(:version => 20120127125744) do
 
   create_table "requests", :force => true do |t|
     t.date     "leavedate"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20120125120503) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.boolean  "authorised"
   end
 
   create_table "users", :force => true do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120125120503) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
 end

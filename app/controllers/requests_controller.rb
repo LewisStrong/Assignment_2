@@ -2,22 +2,34 @@ class RequestsController < ApplicationController
   before_filter :login_required
   
   def index
+  if current_user.admin == true
+  @requests = Request.all
+  else
     @requests = @current_user.requests
+  end
   end
 
   def show
     @request = Request.find(params[:id])
+        if current_user.id != @request.user.id || if current_user.admin = false
+    redirect_to requests_path
+    end
+    end
   end
 
   def new
     @request = Request.new
+    if current_user.admin == true
+    redirect_to requests_path
+    end
   end
 
   def create
     @request = Request.new(params[:request])
+    @request.user_id = current_user.id
     if @request.save
       flash[:notice] = "Successfully Created Holiday Request."
-      redirect_to @request
+      redirect_to requests_path
     else
       render :action => 'new'
     end
@@ -25,6 +37,10 @@ class RequestsController < ApplicationController
 
   def edit
     @request = Request.find(params[:id])
+    if current_user.id != @request.user.id || if current_user.admin = false
+    redirect_to requests_path
+    end
+    end
   end
 
   def update

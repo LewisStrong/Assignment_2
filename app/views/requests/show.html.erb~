@@ -24,8 +24,8 @@
 
 <table>
 <tr>
-<th>Leave Date<br>(dd/mm/yyyy)</th>
-<th>Return Date<br>(dd/mm/yyyy)</th>
+<th>Leave Date</th>
+<th>Return Date</th>
 <th>Total Days</th>
 </tr>
 
@@ -33,6 +33,7 @@
 <td><%=h @request.leavedate %></td>
 <td><%=h @request.returndate %></td>
 <td><%=h @request.total %></td>
+<td><%=h @request.authorised %></td>
 </tr>
 </table>
 

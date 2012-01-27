@@ -25,6 +25,7 @@
     <th>Leave date</th>
     <th>Return date</th>
     <th>Total Days</th>
+    <th>Authorised</th>
     <th></th>
   </tr>
   <% for request in @requests %>
@@ -32,7 +33,8 @@
       <td><%= link_to "Show", request %></td>
       <td><%=h request.leavedate %></td>
       <td><%=h request.returndate %></td>
-      <td><%=h request.total %></td>     
+      <td><%=h request.total %></td>
+      <td><%=h request.total %>  
       <td><%= link_to "Edit", edit_request_path(request) %></td>
 
     </tr>

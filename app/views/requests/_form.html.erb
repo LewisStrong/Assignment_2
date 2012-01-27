@@ -12,5 +12,11 @@
     <%= f.label :"Total" %><br />
     <%= f.text_field :total %>
   </p>
+    <% if current_user.admin == true %>
+  <p>
+    <%= f.label :"Authorised" %><br />
+    <%= f.check_box :authorised %>
+  </p>
+  <% end %>
   <p><%= f.submit %></p>
 <% end %>
